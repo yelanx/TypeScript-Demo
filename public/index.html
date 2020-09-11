@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <!--看板娘 - 猫-->
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script>
+    const modelList=[]
+    const modelType="hijiki"
+    L2Dwidget.init({
+      model: {
+        jsonPath:
+          'https://unpkg.com/live2d-widget-model-'+modelType+'/assets/'+modelType+'.model.json',
+        // <!--这里改模型，前面后面都要改-->
+        scale: 1,
+      },
+      display: {
+        position: "left",
+        // <!--设置看板娘的上下左右位置-->
+        width: 300,
+        height: 600,
+        hOffset: 10,
+        vOffset: -60,
+      },
+      mobile: {
+        show: true,
+        scale: 1,
+      },
+      react: {
+        opacityDefault: 1,
+        // <!--设置透明度-->
+        opacityOnHover: 0.2,
+      },
+    });
+    window.onload = function() {
+      $("#live2dcanvas").attr(
+        "style",
+        "position: fixed; opacity: 0.7; left: 70px; bottom: 0px; z-index: 1; pointer-events: none;"
+      );
+    };
+  </script>
 </html>
