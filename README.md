@@ -1,6 +1,4 @@
-# Demo-combine
-src/ts yelan的TS测试用例（使用VSCode监视+F5）
-***
+# esdemo
 yelan的ES2020测试用例
 ## Project setup
 ```
@@ -11,3 +9,16 @@ npm install
 ```
 npm run serve
 ```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
