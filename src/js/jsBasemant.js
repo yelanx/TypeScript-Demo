@@ -1,3 +1,4 @@
+//转任意进制
 function baseConverter (decNumber ,base){
     let num = decNumber;
     let digist = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -12,5 +13,5 @@ function baseConverter (decNumber ,base){
     return resultArr.map(item => digist[item]).reverse().join("");
 }
 console.log(baseConverter(2323,2));
-//
+
 
