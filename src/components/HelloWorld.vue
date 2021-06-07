@@ -9,7 +9,7 @@ export default {
   name: 'HelloWorld',
   data(){
     return{
-      msg:null
+      msg: "123"
     }
   },
   computed:{
