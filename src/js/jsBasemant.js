@@ -11,4 +11,4 @@ function baseConverter (decNumber ,base){
     }
     return resultArr.map(item => digist[item]).reverse().join("");
 }
-console.log(baseConverter(1024,2));
+console.log(baseConverter(2323,2));
